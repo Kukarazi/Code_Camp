@@ -1,0 +1,119 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "💹",
+  "steps": [
+    {
+      "file": "index.html",
+      "selection": {
+        "start": {
+          "line": 9,
+          "character": 5
+        },
+        "end": {
+          "line": 17,
+          "character": 11
+        }
+      },
+      "description": "Lets make simple layout! one input field for currency amount, one selector for selecting currency from the list and one div for outputing result. We will propagate options in js code (scripts.js) so that our code would be the source of true and not the html file. it's a good practice tipically not to store any data in layout files (it would be harder to sync it with code this way)"
+    },
+    {
+      "file": "script.js",
+      "selection": {
+        "start": {
+          "line": 8,
+          "character": 1
+        },
+        "end": {
+          "line": 13,
+          "character": 3
+        }
+      },
+      "description": "Lets add some constants we will use latter. we need a list of currencies. let's make it array of object. each currency (object inside an array) will have id (when something called id, it's tipically means it's unique). currency will have id (to work with id in code and not comparing titles), symbol and an amoji (for display purpose to make it more fun)"
+    },
+    {
+      "file": "script.js",
+      "selection": {
+        "start": {
+          "line": 51,
+          "character": 19
+        },
+        "end": {
+          "line": 51,
+          "character": 43
+        }
+      },
+      "description": "And then we'll need an exchange rates. even if I would about to go grab that data from some api, I would still start with making it hardcoded const, make all the logic work, and then switch from predefined const to api request. exchange rate are just object with keys of currency. we can access such object as `EXCHANGE_RATES[from][to]` where `from` and `to` are currency.id's. moving on!",
+      "line": 20
+    },
+    {
+      "file": "script.js",
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 1
+        },
+        "end": {
+          "line": 3,
+          "character": 51
+        }
+      },
+      "description": "lets get to work! in order for us to interact with dom ui layout we need handles variable here in js. "
+    },
+    {
+      "file": "script.js",
+      "selection": {
+        "start": {
+          "line": 5,
+          "character": 1
+        },
+        "end": {
+          "line": 6,
+          "character": 51
+        }
+      },
+      "description": "every time user change the amount or select different base currency everything should just re-calculate"
+    },
+    {
+      "file": "script.js",
+      "selection": {
+        "start": {
+          "line": 63,
+          "character": 1
+        },
+        "end": {
+          "line": 66,
+          "character": 4
+        }
+      },
+      "description": "when user open the app we want it already look workable, it would make it more easy to understand. so at start after browser finish work we want to populate currencies into the selector and calculate the result. (default amount is set in html)"
+    },
+    {
+      "file": "script.js",
+      "selection": {
+        "start": {
+          "line": 55,
+          "character": 3
+        },
+        "end": {
+          "line": 55,
+          "character": 37
+        }
+      },
+      "description": "this is better than for loop - in for loop you'l use `i` variable only to access the i'th array item (tipically). Here you get i'th currency without unneded indecies (and there is also a version with access to indicies)\n\n```js \nmyArray.forEach(function (value, i) {\n    console.log('%d: %s', i, value);\n});\n```\n\nthe syntax is easy: array has a function `forEach`. this function takes another function as an argument. forEach traverse every item in the array and call the given function with item, so you can run you code for every array item ✌️"
+    },
+    {
+      "file": "script.js",
+      "selection": {
+        "start": {
+          "line": 38,
+          "character": 1
+        },
+        "end": {
+          "line": 48,
+          "character": 2
+        }
+      },
+      "description": "and here's the core part - every time anythis changes in ui we want to recalculate the result. we make local variables amount and from to simplify the code. for each currency from our list, if thats not user selected currency *(no point converting usd to usd)*, we convert it from one currency to another using exchange rates inside `convert` helper function. "
+    }
+  ]
+}

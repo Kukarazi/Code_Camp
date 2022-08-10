@@ -1,0 +1,14 @@
+.container {
+  margin: 0 auto;
+  padding: 16px;
+}
+h1 {
+  font-size: 3em;
+}
+form input {
+  margin-right: 8px;
+}
+#outputbox {
+  margin-top: 16px;
+  margin-left: 4px;
+}
