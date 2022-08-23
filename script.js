@@ -10,6 +10,7 @@ const CURRENCIES = [
   { id: "rub", symbol: "₽", emoji: "🪆" },
   { id: "gbp", symbol: "£", emoji: "💂‍♀️" },
   { id: "trl", symbol: "₺", emoji: "🦃" },
+  { id: "cny", symbol: "¥", emoji: "🇨🇳" },
 ];
 
 const EXCHANGE_RATES = {
@@ -17,21 +18,31 @@ const EXCHANGE_RATES = {
     rub: 60.2,
     gbp: 0.84,
     trl: 18.11,
+    cny: 6.83,
   },
   rub: {
     usd: 0.016,
     gbp: 0.013,
     trl: 0.3,
+    cny: 0.11,
   },
   gbp: {
     usd: 1.18,
     rub: 71.46,
     trl: 21.5,
+    cny: 8.1,
   },
   trl: {
     usd: 0.055,
     rub: 3.32,
     gbp: 0.046,
+    cny: 0.37,
+  },
+  cny: {
+    usd: 0.14,
+    rub: 8.83,
+    gbp: 0.12,
+    trl: 2.65,
   },
 };
 
