@@ -14,23 +14,23 @@ const CURRENCIES = [
 
 const EXCHANGE_RATES = {
   usd: {
-    rub: 60.48,
-    gbp: 0.83,
-    trl: 17.91,
+    rub: 60.2,
+    gbp: 0.84,
+    trl: 18.11,
   },
   rub: {
-    usd: 0.017,
-    gbp: 0.014,
+    usd: 0.016,
+    gbp: 0.013,
     trl: 0.3,
   },
   gbp: {
-    usd: 1.21,
-    rub: 73.04,
-    trl: 21.63,
+    usd: 1.18,
+    rub: 71.46,
+    trl: 21.5,
   },
   trl: {
-    usd: 0.056,
-    rub: 3.38,
+    usd: 0.055,
+    rub: 3.32,
     gbp: 0.046,
   },
 };
