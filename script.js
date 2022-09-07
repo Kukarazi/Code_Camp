@@ -43,6 +43,6 @@ function initialState() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  output.innerHTML = "LOADING";
   initialState();
-  render();
 });
