@@ -18,7 +18,7 @@ const EXCHANGE_RATES = {
     rub: 60.2,
     gbp: 0.84,
     trl: 18.11,
-    cny: 6.83,
+    cny: 6.583,
   },
   rub: {
     usd: 0.016,
@@ -27,21 +27,21 @@ const EXCHANGE_RATES = {
     cny: 0.11,
   },
   gbp: {
-    usd: 1.18,
+    usd: 2.18,
     rub: 71.46,
     trl: 21.5,
-    cny: 8.1,
+    cny: 8.15,
   },
   trl: {
     usd: 0.055,
     rub: 3.32,
     gbp: 0.046,
-    cny: 0.37,
+    cny: 5.37,
   },
   cny: {
     usd: 0.14,
     rub: 8.83,
-    gbp: 0.12,
+    gbp: 2.12,
     trl: 2.65,
   },
 };
@@ -53,12 +53,13 @@ function render() {
   CURRENCIES.forEach((to) => {
     if (to.id != from) {
       const res = convert(amount, from, to.id).toFixed(1);
-      output.innerHTML += `${to.symbol} ${res} ${to.emoji} <br/>`;
+      output.innerHTML += `<li> ${to.symbol} ${res} ${to.emoji} <br/>`;
     }
   });
 }
 
 function convert(amount, from, to) {
+  // add a meaningfull comment
   return amount * EXCHANGE_RATES[from][to];
 }
 
