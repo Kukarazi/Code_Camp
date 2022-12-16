@@ -1,7 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  padding: 40px 0 0 100px;
+}
+
 .container {
-color: white;
- max-width: 100%;
- max-height: 100%;
+  color: rgba(89, 253, 254, 1);
+  max-width: 100%;
+  max-height: 100%;
 }
 h1 {
   font-size: 3em;
@@ -13,17 +22,31 @@ form input {
   margin-top: 16px;
   margin-left: 4px;
 }
-#background{
+#background {
   position: absolute;
   z-index: -1;
   width: 100%;
   height: 100%;
-  
 }
-#content{
-  padding: 16px;
+
+#amount {
+  padding: 0;
+  padding-left: 5px;
+  background-color: rgb(245, 245, 245);
+  font-family: sans-serif;
+  font-size: 15px;
+  border-radius: 3px;
 }
-body{
-  background-color: rgb(4, 75, 99);
-  margin: 0;
+
+#currencies {
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: whitesmoke;
+  border-radius: 3px;
+}
+
+li {
+  padding-bottom: 5px;
+  list-style: none;
 }

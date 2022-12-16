@@ -7,7 +7,7 @@ currenciesInput.addEventListener("input", render);
 
 let EXCHANGE_RATES = undefined;
 
-const CURRENCIES = ["USD", "RUB", "TRY", "BOB", "UZS", "EUR"];
+const CURRENCIES = ["USD", "RUB", "EUR", "AMD", "GEL", "THB", "IDR", "VND"];
 
 function render() {
   const amount = amountInput.valueAsNumber;
@@ -16,7 +16,7 @@ function render() {
   CURRENCIES.forEach((to) => {
     if (to != from) {
       const res = convert(amount, from, to).toFixed(1);
-      output.innerHTML += `<li> ${to} ${res} <br/>`;
+      output.innerHTML += `<li> ${to} ${res}</br>`;
     }
   });
 }
